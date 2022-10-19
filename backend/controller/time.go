@@ -56,7 +56,7 @@ func DeleteTIME(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": id})
 }
 
-// PATCH /time
+// PATCH /times
 func UpdateTIME(c *gin.Context) {
 	var time entity.TIME
 	if err := c.ShouldBindJSON(&time); err != nil {

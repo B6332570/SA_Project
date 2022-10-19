@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// POST /computers
+// POST /computer_OSs
 func CreateCOMPUTER_OS(c *gin.Context) {
 	var computer_os entity.COMPUTER_OS
 	if err := c.ShouldBindJSON(&computer_os); err != nil {
@@ -56,7 +56,7 @@ func DeleteCOMPUTER_OS(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": id})
 }
 
-// PATCH /computer_os
+// PATCH /computer_oss
 func UpdateCOMPUTER_OS(c *gin.Context) {
 	var computer_os entity.COMPUTER_OS
 	if err := c.ShouldBindJSON(&computer_os); err != nil {
